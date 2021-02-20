@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4>Meme</h4>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <form action="/{{meme.id}}" method="post">
+                <div class="form-group">
+                    <label for="name">Nome: </label>
+                    <input class="form-control" id="name" name="name" value="{{meme.name}}" type="text" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="type">Tipo do Meme: </label>
+                    <input  class="form-control" id="type" type="text" value="{{meme.type}}" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="link">Link da Imagem: </label>
+                    <input  class="form-control" id="link" type="text" value="{{meme.link}}" disabled>
+                </div>
+                <a href="/" type="button" class="btn btn-primary">Voltar</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+

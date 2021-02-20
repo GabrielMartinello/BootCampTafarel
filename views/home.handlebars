@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-10">
+      <h4>Menes</h4>
+    </div>
+    <div class="col-2">
+      <a href="/create" class="btn btn-primary"><i class="fas fa-plus"></i> Novo meme</a>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <table class="table table-hover" id="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Link</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each memes as |meme|}}
+            <tr>
+              <th scope="row">{{meme.id}}</th>
+              <td>{{meme.name}}</td>
+              <td>{{meme.type}}</td>
+              <td>{{meme.link}}</td>
+              <td>
+                <a href="/{{meme.id}}" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                <a href="/edit/{{meme.id}}" class="btn btn-sm btn-warning text-white"><i class="fas fa-pen"></i></a>
+                <a href="/delete/{{meme.id}}" class="btn btn-sm btn-danger text-white"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
